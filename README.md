@@ -1,30 +1,27 @@
-# Centos for Molecule Tests
+# Alpine Puppeteer
 
-[![CI](https://github.com/yuriclopes/docker-centos-molecule-test/workflows/Build/badge.svg?branch=main&event=push)](https://github.com/yuriclopes/docker-centos-molecule-test/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/yuriclopes/centos-molecule-test)](https://hub.docker.com/r/yuriclopes/centos-molecule-test)
-
-- centos 8 Docker container for Molecule Tests.
-- centos 7 Docker container for Molecule Tests.
+[![Build](https://github.com/yuriclopes/docker-alpine-puppeteer/actions/workflows/build.yml/badge.svg)](https://github.com/yuriclopes/docker-alpine-puppeteer/actions/workflows/build.yml)
+- Latest Alpine image with Puppeteer and Chromium Browser
 
 ## Tags
 
-  - `8`: Latest stable version for Centos 8 release
-  - `7`: Latest stable version for Centos 7 release
+  - `latest`: Latest stable version
 
-## How to Build (Centos 8)
+## How to Build
 
 This image is built on Docker Hub automatically, but if you need to build the image on your own locally, do the following:
 
   1. [Install Docker](https://docs.docker.com/engine/installation/).
   2. `cd` into this directory.
-  3. Run `docker build -t centos-molecule-test:8 -f 8/Dockerfile .`
+  3. Run `docker build -t alpine-puppeteer:test .`
 
-## How to Use (Centos 8)
+## How to Use
 
   1. [Install Docker](https://docs.docker.com/engine/installation/).
-  2. Pull this image from Docker Hub: `docker pull yuriclopes/centos-molecule-test:8` (or use the image you built earlier, e.g. `centos-molecule-test:8`).
-  3. Run a container from the image: `docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro yuriclopes/centos-molecule-test:8`.
+  2. Pull this image from Docker Hub: `docker pull yuriclopes/alpine-puppeteer:latest` (or use the image you built earlier, e.g. `alpine-puppeteer:test`).
+  3. Run a container from the image: `docker run --detach yuriclopes/alpine-puppeteer:latest YOUR_COMMAND`.
 
-> **Important Note**: I use this image for molecule testing. Use on production at your own risk!
+> **Important Note**: I use this image for testing. Use on production at your own risk!
 
 ## Author
 
